@@ -1,4 +1,4 @@
-package testconfigs;
+package ua.com.anya.testconfigs;
 
 import org.junit.After;
 

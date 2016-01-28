@@ -1,6 +1,8 @@
+package ua.com.anya;
+
 import org.junit.Test;
 import org.openqa.selenium.Keys;
-import testconfigs.AtTodoMVCPageWithClearedDataAfterEachTest;
+import ua.com.anya.testconfigs.AtTodoMVCPageWithClearedDataAfterEachTest;
 
 import static ua.com.anya.pages.Task.Status.ACTIVE;
 import static ua.com.anya.pages.Task.Status.COMPLETED;

@@ -1,5 +1,7 @@
+package ua.com.anya;
+
 import org.junit.Test;
-import testconfigs.AtTodoMVCPageWithClearedDataAfterEachTest;
+import ua.com.anya.testconfigs.AtTodoMVCPageWithClearedDataAfterEachTest;
 
 import static ua.com.anya.pages.TodoMVC.*;
 
