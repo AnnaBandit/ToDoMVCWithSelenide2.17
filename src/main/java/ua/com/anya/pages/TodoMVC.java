@@ -2,7 +2,6 @@ package ua.com.anya.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -11,10 +10,8 @@ import static com.codeborne.selenide.CollectionCondition.empty;
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.url;
 import static ua.com.anya.Helpers.doubleClick;
-import static ua.com.anya.Helpers.hover;
 
 public class TodoMVC {
     public static ElementsCollection tasksList = $$("#todo-list li");
@@ -48,8 +45,8 @@ public class TodoMVC {
     }
 
     public static void delete(String taskText){
-        WebDriver driver = getWebDriver();
-        hover(tasksList.find(exactText(taskText)), driver).findElement(By.className("destroy")).click();
+        actions().moveToElement(tasksList.find(exactText(taskText))).perform();
+        $(By.className("destroy")).click();
     }
 
     public static void toggle(String taskText){
